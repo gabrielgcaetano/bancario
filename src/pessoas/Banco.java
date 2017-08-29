@@ -64,25 +64,25 @@ public class Banco {
 
     public void find() throws IOException, Exception {
         u = new Util();
-        i = 0;
+        int i = 0;
         j = 0;
-        pessoaF = null;
-        pessoaJ = null;
 
         String linha;
         FileReader arq = new FileReader("c:\\Temporario\\pessoa.txt");
         BufferedReader lerArq = new BufferedReader(arq);
+//        String array[] = new String[100];
+
         do {
-            
             linha = lerArq.readLine();
-            String array[] = new String[100];
-            array = linha.split(":");
+            String vetorLinha[] = linha.split(":");
 
-            if (array[2].equals("pf")) {
-                PessoaFisica pf = new PessoaFisica(array[0], array[1]);
-
+            if (vetorLinha[2].equals("pf")) {
+                PessoaFisica pf = new PessoaFisica(vetorLinha[0], vetorLinha[1]);
                 pessoaF[i] = pf;
                 i++;
+            } else if (vetorLinha[2].equals("pj")) {
+                PessoaJuridica pj = new PessoaJuridica(vetorLinha[0], vetorLinha[1]);
+                pessoaJ[j] = pj;
             }
 
         } while (linha != null);
