@@ -6,7 +6,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
 
 /**
  *
@@ -87,19 +86,6 @@ public class Banco {
 
         } while (linha != null);
         arq.close();
-//        do {
-//            linha = u.leitorArquivos();
-//            String array[] = new String[100];
-//            array = linha.split(":");
-//
-//            if (array[1].length() == 14) {
-//                PessoaJuridica pj = new PessoaJuridica(array[0], array[1]);
-//                pessoaJ[j] = pj;
-//            }
-//
-//        } while (linha != null);
-
-//        
     }
 
     public void findPJ() {
