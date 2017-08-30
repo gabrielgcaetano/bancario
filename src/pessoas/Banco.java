@@ -82,6 +82,7 @@ public class Banco {
             } else if (vetorLinha[2].equals("pj")) {
                 PessoaJuridica pj = new PessoaJuridica(vetorLinha[0], vetorLinha[1]);
                 pessoaJ[j] = pj;
+                j++;
             }
 
         } while (linha != null);
